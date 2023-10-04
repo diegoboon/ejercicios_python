@@ -1,22 +1,9 @@
-import ejercicio1
+def es_primo(n):
+  for i in range(2, int(n ** 0.5) + 1):
+    if n % i == 0:
+      return False
 
-def nextPrime(n):
+  return True
 
 
-  i = n + 1
-  while not ejercicio1.es_primo(i):
-    i += 1
-  return i
-
-def main():
-
-  n = int(input("Introduce un número: "))
-  next_prime = nextPrime(n)
-
-  if next_prime is not None:
-    print(f"El primer número primo mayor que {n} es {next_prime}.")
-  else:
-    print("No existe un número primo mayor que {n}.")
-
-if __name__ == "__main__":
-  main()
+print(es_primo(10))
